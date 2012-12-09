@@ -52,3 +52,11 @@ package.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Fri Mar 02 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
++ Revision: 781916
+- Import texlive-bibleref-lds
+- Import texlive-bibleref-lds
+
