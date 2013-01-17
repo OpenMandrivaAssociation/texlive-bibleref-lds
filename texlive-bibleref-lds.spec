@@ -6,8 +6,8 @@
 # catalog-version 1.0
 Name:		texlive-bibleref-lds
 Version:	1.0
-Release:	1
-Summary:	Bible references, including those to the scriptures of the Church of Jesus Christ of Latter Day Saints
+Release:	2
+Summary:	Bible references, including Church of Jesus Christ of Latter Day Saints
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bibleref-lds
 License:	LPPL1.3
