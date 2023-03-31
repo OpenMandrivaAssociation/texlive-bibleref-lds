@@ -1,6 +1,6 @@
 Name:		texlive-bibleref-lds
 Version:	25526
-Release:	1
+Release:	2
 Summary:	Bible references, including Church of Jesus Christ of Latter Day Saints
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bibleref-lds
