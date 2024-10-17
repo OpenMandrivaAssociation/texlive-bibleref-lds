@@ -3,7 +3,7 @@ Version:	25526
 Release:	2
 Summary:	Bible references, including Church of Jesus Christ of Latter Day Saints
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bibleref-lds
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/bibleref-lds
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibleref-lds.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibleref-lds.doc.r%{version}.tar.xz
