@@ -1,49 +1,26 @@
-Name:		texlive-bibleref-lds
-Version:	25526
-Release:	2
-Summary:	Bible references, including Church of Jesus Christ of Latter Day Saints
+%global tl_name bibleref-lds
+%global tl_revision 25526
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.0
+Release:	%{tl_revision}.1
+Summary:	Bible references, including those to the scriptures of the Church of Jesus Ch...
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/bibleref-lds
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibleref-lds.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibleref-lds.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bibleref-lds.source.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/bibleref-lds.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/bibleref-lds.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/bibleref-lds.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package extends the bibleref-mouth package to support
-references to the scriptures of The Church of Jesus Christ of
-Latter-day Saints (LDS). The package requires bibleref-mouth to
-run, and its reference syntax is the same as that of the parent
-package.
+The package extends the bibleref-mouth package to support references to
+the scriptures of The Church of Jesus Christ of Latter-day Saints (LDS).
+The package requires bibleref-mouth to run, and its reference syntax is
+the same as that of the parent package.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/bibleref-lds/bibleref-lds.sty
-%doc %{_texmfdistdir}/doc/latex/bibleref-lds/README
-%doc %{_texmfdistdir}/doc/latex/bibleref-lds/bibleref-lds.pdf
-#- source
-%doc %{_texmfdistdir}/source/latex/bibleref-lds/bibleref-lds.dtx
-%doc %{_texmfdistdir}/source/latex/bibleref-lds/bibleref-lds.ins
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
